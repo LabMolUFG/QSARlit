@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  production:
+    container_name: qsarlit-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    working_dir: /usr/qsartlit/app
+    restart: unless-stopped
+    ports:
+      - 8501:8501      
+    volumes:
+      - ./app:/usr/qsartlit/app
+    networks:
+      - qsartlit
+    command: streamlit run app.py
+
+  debugger:
+    container_name: qsartlit-debugger
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: debug
+    working_dir: /usr/qsartlit/app
+    restart: unless-stopped
+    ports:
+      - 8501:8501  
+    volumes:
+      - ./app:/usr/qsartliy/app
+    networks:
+      - qsartlit
+
+networks:
+  qsartlit:

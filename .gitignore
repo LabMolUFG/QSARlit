@@ -1,0 +1,8 @@
+#ignore .pyc files
+/*.csv
+__pycache__/
+#imgs/*.png
+outa.txt
+t.py
+
+app/imgs/*
