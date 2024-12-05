@@ -85,7 +85,7 @@ def app(df,s_state):
 
         st.sidebar.header('2. Curation steps')
 
-        st.sidebar.subheader('Select step for visual inspection')
+        st.sidebar.subheader('Select steps for data curation:')
                 
         container = st.sidebar.container()
         _all = st.sidebar.checkbox("Select all")
