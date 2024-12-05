@@ -29,13 +29,12 @@ def app(_, s_state):
     }
     </style>
     <p class="centered-text">
-    This app allows you to curate data, calculate molecular descriptors, develop Machine Learning models, perform virtual screening,
-    and interpret the predictions with probability maps for computational toxicology and drug discovery projects.
+    This app allows you to curate data, calculate molecular descriptors, develop Machine Learning models, and perform virtual screening 
+    for computational toxicology and drug discovery projects.
     </p>
     <div class="centered-text">
     <strong>Credits</strong><br>
-    - App built in Python + Streamlit by José Teófilo Moreira Filho (<a href="http://lattes.cnpq.br/3464351249761623" target="_blank">Lattes</a>, <a href="https://scholar.google.com/citations?user=0I1GiOsAAAAJ&hl=pt-BR" target="_blank">Google Scholar</a>, <a href="https://orcid.org/0000-0002-0777-280X" target="_blank">ORCID</a>), <a href="https://rcbraga.github.io/" target="_blank">Rodolpho C. Braga</a>, Henric P. V. Gil, Vinicius M. Alves, Bruno J. Neves, and <a href="http://labmol.com.br/" target="_blank">Carolina H. Andrade</a>.
-    </div>
+    - App built in Python + Streamlit by Igor Henrique Sanches (<a href="http://lattes.cnpq.br/8640209397163468" target="_blank">Lattes</a>, <a href="https://www.linkedin.com/in/sanches-igor" target="_blank">LinkedIn</a>), Joyce Vila Verde Bastos Borba, Sabrina Silva-Mendonça, Jade Milhomem Lemos (<a href="http://lattes.cnpq.br/0140760039980984" target="_blank">Lattes</a>, <a href="https://www.linkedin.com/in/jade-milhomem-lemos-7119aa129/" target="_blank">LinkedIn</a>), Francisco L. Feitosa (<a href="https://orcid.org/0009-0006-0619-4514" target="_blank">Orcid</a>, <a href="https://www.linkedin.com/in/franciscofeitosafl/" target="_blank">LinkedIn</a>), Ester Sousa, José Teófilo Moreira Filho (<a href="http://lattes.cnpq.br/3464351249761623" target="_blank">Lattes</a>, <a href="https://scholar.google.com/citations?user=0I1GiOsAAAAJ&hl=pt-BR" target="_blank">Google Scholar</a>, <a href="https://orcid.org/0000-0002-0777-280X" target="_blank">ORCID</a>), Henric Gil, Bruno J. Neves, Rodolpho C. Braga and Carolina Horta Andrade.
     """, unsafe_allow_html=True)
 
 def image_to_base64(image_path):
