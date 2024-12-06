@@ -4,6 +4,7 @@ from st_aggrid import AgGrid
 import base64
 from io import BytesIO
 import warnings
+import io
 warnings.filterwarnings(action='ignore')
 
 import numpy as np
@@ -285,7 +286,7 @@ def app(df, s_state):
                 x_metrics = metrics_to_plot
                 y_metrics = statistics.loc[0, metrics_to_plot].values
 
-                colors = ["navy", "purple", "crimson", "darkorange"]
+                colors = ["#AEC6CF", "#B39EB5", "#FFB7CE", "#FFDAC1"]
 
                 fig = go.Figure(data=[go.Bar(
                     x=x_metrics,
@@ -296,6 +297,18 @@ def app(df, s_state):
                 )])
 
                 st.plotly_chart(fig)
+                # Save the figure as a high-quality image
+                img_buffer = io.BytesIO()
+                fig.write_image(img_buffer, format="png", width=1200, height=800, scale=3)
+                img_buffer.seek(0)
+
+                # Add a download button
+                st.download_button(
+                    label="Download High-Quality Image",
+                    data=img_buffer,
+                    file_name="plot.png",
+                    mime="image/png"
+                )
 
                 # Store variables in s_state
                 s_state['opt_lgbm'] = opt_lgbm

@@ -306,7 +306,8 @@ def app(df, s_state):
                 x_metrics = metrics_svr_cv_graph.columns
                 y_metrics = metrics_svr_cv_graph.loc[0].values
 
-                colors = ["navy", "purple", "crimson", "darkorange", "orange", "yellow", "teal"]
+                colors = ["#AEC6CF", "#B39EB5", "#FFB7CE", "#FFDAC1", "#FFD1DC", "#FDFD96", "#B5EAD7"]
+
 
                 fig = go.Figure(data=[go.Bar(
                     x=x_metrics, y=y_metrics,
@@ -316,6 +317,18 @@ def app(df, s_state):
                 )])
 
                 st.plotly_chart(fig)
+                # Save the figure as a high-quality image
+                img_buffer = io.BytesIO()
+                fig.write_image(img_buffer, format="png", width=1200, height=800, scale=3)
+                img_buffer.seek(0)
+
+                # Add a download button
+                st.download_button(
+                    label="Download High-Quality Image",
+                    data=img_buffer,
+                    file_name="plot.png",
+                    mime="image/png"
+)
 
                 # Store variables in s_state
                 s_state['opt_svr'] = opt_svr
