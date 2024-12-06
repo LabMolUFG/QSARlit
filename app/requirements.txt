@@ -35,6 +35,7 @@ jsonschema-specifications
 jupyter-client
 jupyter-core
 jupyterlab-pygments
+kaleido
 kiwisolver
 lightgbm
 markdown-it-py
