@@ -57,7 +57,7 @@ pickleshare
 pillow
 pipreqs
 platformdirs
-plotly
+plotly==5.24.1
 prompt-toolkit
 protobuf==3.20.3
 pure-eval
